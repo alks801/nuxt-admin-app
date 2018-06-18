@@ -1,6 +1,6 @@
-# opmseadmin
+# Admin App
 
-> My astonishing Nuxt.js project
+> Admin Nuxt.js project
 
 ## Build Setup
 
