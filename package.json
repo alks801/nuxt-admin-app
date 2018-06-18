@@ -1,0 +1,24 @@
+{
+  "name": "opmseadmin",
+  "version": "1.0.0",
+  "description": "My astonishing Nuxt.js project",
+  "author": "sn0wil",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0",
+    "express": "^4.15.3",
+    "@nuxtjs/axios": "^5.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "nodemon": "^1.11.0"
+  }
+}
