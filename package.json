@@ -15,6 +15,7 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/vue-fontawesome": "0.0.23",
     "@nuxtjs/axios": "^5.0.0",
+    "body-parser": "^1.18.3",
     "express": "^4.15.3",
     "nuxt": "^1.0.0"
   },

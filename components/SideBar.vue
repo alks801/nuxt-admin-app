@@ -32,7 +32,7 @@ export default {
 
 <style lang="less" scoped>
 .side-bar {
-  width: 300px;
+  width: 330px;
   background: #fafafa;
   box-shadow: 2px 0 2px -2px #bebebe;
   ul {
@@ -47,23 +47,23 @@ export default {
       cursor: pointer;
       align-items: center;
       height: 65px;
-      padding-left: 20px;
+      padding-left: 25px;
       border-bottom: 1px solid #d4d4d4;
       transition: all 0.2s ease-in-out;
       user-select: none;
       .blue {
-        color: #2f2cac;
+        color: #064db8;
       }
       .red {
-        color: #ce212f;
+        color: #e01f2ffa;
       }
       .text {
         margin: 0;
         padding: 0;
-        padding-left: 10px;
+        padding-left: 15px;
       }
       &.selected {
-        border-left: 3px solid #2f2cac;
+        border-left: 3px solid #064db8;
         background: #eeeeee;
       }
       &:hover {

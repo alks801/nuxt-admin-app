@@ -8,12 +8,12 @@ const port = process.env.PORT || 3000
 
 app.set('port', port)
 
-// app.use(bodyParser.json())
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: true
-//   })
-// )
+var bodyParser = require('body-parser');
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+
 app.use('/api', api)
 
 // Import and Set Nuxt.js options
