@@ -1,11 +1,20 @@
-
 const express = require('express')
 const { Nuxt, Builder } = require('nuxt')
+const api = require('./api')
+
 const app = express()
-const host = process.env.HOST || '127.0.0.1'
+const host = process.env.HOST || 'localhost'
 const port = process.env.PORT || 3000
 
 app.set('port', port)
+
+// app.use(bodyParser.json())
+// app.use(
+//   bodyParser.urlencoded({
+//     extended: true
+//   })
+// )
+app.use('/api', api)
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
@@ -23,6 +32,11 @@ async function start() {
 
   // Give nuxt middleware to express
   app.use(nuxt.render)
+
+  // Api routes
+  app.get('/getText', async (req, res) => {
+    res.send('Hello World!')
+  })
 
   // Listen the server
   app.listen(port, host)

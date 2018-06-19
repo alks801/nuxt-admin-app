@@ -1,33 +1,34 @@
 <template>
     <div class="side-bar">
         <ul>
-            <li class="menu-item">
-                <i class="icon fas fa-cog"></i>
-                <p class="text">System Config</p>
-            </li>
-            <li class="menu-item selected">
-                <i class="icon fas fa-table"></i>
-                <p class="text">Db Connections</p>
-            </li>
-            <li class="menu-item">
-                <i class="icon fas fa-key"></i>
-                <p class="text">API Keys</p>
-            </li>
-            <li class="menu-item">
-                <i class="icon fas fa-comment"></i>
-                <p class="text">Response Messages</p>
-            </li>
-            <li class="menu-item">
-                <i class="icon fas fa-link"></i>
-                <p class="text">API Routes</p>
-            </li>
-            <li class="menu-item">
-                <i class="icon fas fa-users"></i>
-                <p class="text">Admin Panel Users</p>
+            
+            <li class="menu-item" 
+            v-for="link in links" :key="link.icon"
+            :class="{selected: $route.path === link.path}" 
+            @click="$router.push(link.path)">
+                <font-awesome-icon :class="link.styleClass" :icon="link.icon"/>
+                <p class="text">{{link.text}}</p>
             </li>
         </ul>
     </div>
 </template>
+
+<script>
+export default {
+    data: function(){
+        return {
+            links : [
+                {path: '/system-config',styleClass: 'blue', icon:'cog', text: 'System Config'},
+                {path: '/db-connections',styleClass: 'blue', icon:'table', text: 'Db Connections'},
+                {path: '/api-keys',styleClass: 'blue', icon:'key', text: 'API Keys'},
+                {path: '/response-messages',styleClass: 'blue', icon:'comment', text: 'Response Messages'},
+                {path: '/api-routes',styleClass: 'blue', icon:'link', text: 'API Routes'},
+                {path: '/admin-panel-users',styleClass: 'red', icon:'users', text: 'Admin Panel Users'},
+            ]
+        }
+    }
+}
+</script>
 
 <style lang="less" scoped>
 .side-bar {
@@ -44,14 +45,13 @@
       font-size: 1.2em;
       display: flex;
       cursor: pointer;
-      //flex-direction: column;
       align-items: center;
       height: 65px;
       padding-left: 20px;
       border-bottom: 1px solid #d4d4d4;
       transition: all 0.2s ease-in-out;
       user-select: none;
-      .icon {
+      .blue {
         color: #2f2cac;
       }
       .red {
@@ -65,7 +65,6 @@
       &.selected {
         border-left: 3px solid #2f2cac;
         background: #eeeeee;
-        //box-shadow: 1px 1px 1px grey, -1px 1px 1px grey inset;
       }
       &:hover {
         background: #e4e4e4;

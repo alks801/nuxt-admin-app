@@ -11,9 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^1.0.0",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/vue-fontawesome": "0.0.23",
+    "@nuxtjs/axios": "^5.0.0",
     "express": "^4.15.3",
-    "@nuxtjs/axios": "^5.0.0"
+    "nuxt": "^1.0.0"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",
