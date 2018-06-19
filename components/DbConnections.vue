@@ -1,5 +1,5 @@
 <template>
-    <div>{{connections}}</div>
+      <ItemsEditor :items="connections"/>
 </template>
 
 <script>

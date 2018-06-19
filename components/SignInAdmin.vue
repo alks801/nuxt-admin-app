@@ -76,9 +76,9 @@ export default {
       align-items: center;
       height: 50px;
       font-size: 1.5em;
-      background: #fafafa;
       border-radius: 5px 5px 0 0;
       width: 100%;
+      background: #fafafa;
       border-bottom: 1px solid #d4d4d4;
     }
     .input-container {
