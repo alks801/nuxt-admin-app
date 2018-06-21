@@ -109,18 +109,18 @@ export default {
 		flex-direction: column;
 		.title {
 			color: #35495e;
-			font-size: 1.5em;
-      user-select: none;
-      padding: 5px 15px;
-      background: #f3f3f3;
-  font-weight:600; 
+			font-size: 1.1em;
+			user-select: none;
+			padding: 5px 15px;
+			background: #f3f3f3;
+			font-weight: 600;
 		}
 		li.menu-item {
-			font-size: 1.2em;
+			font-size: 1em;
 			display: flex;
 			cursor: pointer;
 			align-items: center;
-			height: 65px;
+			height: 50px;
 			padding-left: 25px;
 			border-top: 1px solid #d4d4d4;
 			transition: all 0.2s ease-in-out;
