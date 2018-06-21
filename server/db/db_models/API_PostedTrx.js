@@ -2,10 +2,14 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('API_PostedTrx', {
+		Id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			primaryKey: true
+		},
 		CONF_NO: {
 			type: DataTypes.INTEGER(10),
 			allowNull: true,
-			primaryKey: true
 		},
 		IFN: {
 			type: DataTypes.INTEGER(10),

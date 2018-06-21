@@ -16,7 +16,7 @@
 				<div class="row header">
                     
                 </div>
-				<div class="row editing" v-for="i in localItems" @click="i.isEditing=!i.isEditing">
+				<div class="row editing" v-for="i in localItems" @click="editClick(i)">
 					<font-awesome-icon class="edit" icon="edit" v-if="!i.isEditing"/>
 					<font-awesome-icon class="ok" icon="check" v-else/>
 				</div>
@@ -27,8 +27,9 @@
 
 <script>
 import axios from 'axios';
+
 export default {
-	props: ['urlGet'],
+	props: ['urlGet', 'urlPost'],
 	data: function() {
 		return {
 			columns: [],
@@ -53,6 +54,15 @@ export default {
 			let response = await axios.get(this.urlGet);
 			this.items = response.data;
 		},
+		editClick(item) {
+			let isOkayClick = item.isEditing;
+			item.isEditing=!item.isEditing;
+			if (isOkayClick) {
+				axios.post(this.urlPost, item)
+				.then(r => console.log(r))
+				.catch(e =>console.log(e))
+			}
+		}
 	},
 };
 </script>
@@ -108,6 +118,7 @@ export default {
 				.editEl{
 					height: 39px;
 					width: 100%;
+					font-size: 1em;
 				}
 			}
 		}

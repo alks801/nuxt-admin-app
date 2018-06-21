@@ -2,10 +2,14 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('Chn_RoomTypes', {
+		Id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			primaryKey: true
+		},
 		RoomType_Code: {
 			type: DataTypes.TEXT,
 			allowNull: true,
-			primaryKey: true
 		},
 		RoomType_Desc: {
 			type: DataTypes.TEXT,

@@ -2,10 +2,14 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('API_Keys', {
-		KEY: {
-			type: DataTypes.STRING,
+		Id: {
+			type: DataTypes.INTEGER,
 			allowNull: true,
 			primaryKey: true
+		},
+		KEY: {
+			type: DataTypes.STRING,
+			allowNull: true
 		},
 		STATUS: {
 			type: DataTypes.CHAR(1),

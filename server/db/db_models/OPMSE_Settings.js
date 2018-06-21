@@ -2,10 +2,14 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('OPMSE_Settings', {
+		Id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			primaryKey: true
+		},
 		Sett_Group: {
 			type: DataTypes.TEXT,
 			allowNull: true,
-			primaryKey: true
 		},
 		Sett_Setting: {
 			type: DataTypes.TEXT,

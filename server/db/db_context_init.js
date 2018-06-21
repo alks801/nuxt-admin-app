@@ -6,7 +6,10 @@ const path = require("path");
 const dbName = 'OPMSE.db';
 const modelsFolder = '/db_models';
 
-const sequelize = new Sequelize(`sqlite:server/db/${dbName}`)
+const sequelize = new Sequelize(null, null, null, {
+    dialect: 'sqlite',
+    storage: 'C:/Users/denisevich/Documents/GitHub/nuxt-admin-app/server/db/OPMSE.db',
+});
 
 var db = {};
 

@@ -2,10 +2,14 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('Site_Alias', {
+		Id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			primaryKey: true
+		},
 		ALIAS: {
 			type: DataTypes.STRING(15),
 			allowNull: true,
-			primaryKey: true
 		},
 		ACTIVE: {
 			type: DataTypes.CHAR(1),

@@ -42,6 +42,10 @@ module.exports = function(sequelize, DataTypes) {
 		Role: {
 			type: DataTypes.TEXT,
 			allowNull: true
+		},
+		User_Pass: {
+			type: DataTypes.TEXT,
+			allowNull: true
 		}
 	}, {
 		tableName: 'API_Users',

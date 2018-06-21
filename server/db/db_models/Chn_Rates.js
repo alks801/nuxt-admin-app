@@ -2,10 +2,14 @@
 
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('Chn_Rates', {
-		Rate_code: {
-			type: DataTypes.TEXT,
+		Id: {
+			type: DataTypes.INTEGER,
 			allowNull: true,
 			primaryKey: true
+		},
+		Rate_code: {
+			type: DataTypes.TEXT,
+			allowNull: true
 		},
 		Rate_Desc: {
 			type: DataTypes.TEXT,

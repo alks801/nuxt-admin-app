@@ -42,7 +42,8 @@ body {
       height: 100%;
       width: 100%;
       display: flex;
-      justify-content: center;
+      padding-left:50px;
+      //justify-content: center;
       overflow-x: auto;
     }
   }
