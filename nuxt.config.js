@@ -59,8 +59,14 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+   /* extend(config, ctx) {
       
+    }*/
+
+    extend(config, options) {
+      return Object.assign({}, config, {
+        devtool: 'source-map'
+      })
     }
   }
 }

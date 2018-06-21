@@ -43,6 +43,7 @@ body {
       width: 100%;
       display: flex;
       justify-content: center;
+      overflow-x: auto;
     }
   }
   .footer {

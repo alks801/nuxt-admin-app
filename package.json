@@ -8,7 +8,8 @@
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "dev-debug": "node --inspect node_modules/.bin/nuxt"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
@@ -17,7 +18,9 @@
     "@nuxtjs/axios": "^5.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.15.3",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "sequelize": "^4.38.0",
+    "sqlite3": "^4.0.0"
   },
   "devDependencies": {
     "cross-env": "^5.0.1",

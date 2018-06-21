@@ -1,3 +1,3 @@
 <template>
-    <div>Api Keys</div>
+    <ItemsEditor :urlGet="'api/get-api-keys'"/>
 </template>

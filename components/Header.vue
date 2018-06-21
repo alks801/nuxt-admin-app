@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div class="main text">Meeting Rooms REST API <span class="small">{{$route.path}}</span></div>
+        <div class="main text">Meeting Rooms REST API <span class="small">{{$route.path == '/' ? '' : $route.path}}</span></div>
         <div class="login text" v-if="user.isUserAuthenticated">
             {{user.login}}
             <font-awesome-icon class="icon" icon="sign-out-alt"

@@ -1,5 +1,3 @@
 <template>
-    <div>
-        This content will apear only for admins
-        </div>
+    <ItemsEditor :urlGet="'api/get-admin-panel-users'"/>
 </template>
