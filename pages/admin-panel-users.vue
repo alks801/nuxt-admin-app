@@ -1,24 +1,12 @@
 <template>
-    <div>
-        <AdminPanelUsers v-if="isUserAuthenticated"/>
-        <SignInAdmin v-else/>
-    </div>
+        <AdminPanelUsers/>
 </template>
 
 <script>
 import AdminPanelUsers from '@/components/AdminPanelUsers'
-import SignInAdmin from '@/components/SignInAdmin'
 export default {
-  computed: {
-    isUserAuthenticated: {
-      get() {
-        return this.$store.state.user.isUserAuthenticated
-      }
-    }
-  },
-  components: {
-    AdminPanelUsers,
-    SignInAdmin
-  }
+	components: {
+		AdminPanelUsers
+	}
 }
 </script>

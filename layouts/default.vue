@@ -1,20 +1,29 @@
 <template>
   <div class="full-window-container">
     <Header />
-    <div class="content-container">
+    <div class="content-container" v-if="isUserAuthenticated">
       <SideBar/>
       <div class="content">
-        <nuxt/>
+        <nuxt />
       </div>
     </div>
+    <SignInAdmin v-else/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
 import SideBar from "@/components/SideBar";
+import SignInAdmin from '@/components/SignInAdmin'
 export default {
-  components: { Header, SideBar }
+  components: { Header, SideBar, SignInAdmin },
+  computed: {
+    isUserAuthenticated: {
+      get() {
+        return this.$store.state.user.isUserAuthenticated
+      }
+    }
+  },
 };
 </script>
 
@@ -40,9 +49,9 @@ body {
     }
     .content {
       height: 100%;
-      width: 100%;
+      width: calc(~'100vw - 370px');
       display: flex;
-      padding-left:50px;
+      padding:0 20px;
       //justify-content: center;
       overflow-x: auto;
     }

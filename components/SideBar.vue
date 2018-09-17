@@ -98,8 +98,9 @@ export default {
 	width: 370px;
 	background: #fafafa;
 	box-shadow: 2px 0 12px -2px #bebebe;
+		background: rgb(49, 45, 68);
 	ul:not(:first-child) {
-		border-top: 2px solid #6486ac;
+		border-top: 2px solid rgb(119, 135, 135);
 	}
 	ul {
 		list-style-type: none;
@@ -108,11 +109,11 @@ export default {
 		display: flex;
 		flex-direction: column;
 		.title {
-			color: #35495e;
+			color: rgb(119, 135, 135);
 			font-size: 1.1em;
 			user-select: none;
 			padding: 5px 15px;
-			background: #f3f3f3;
+			//background: #f3f3f3;
 			font-weight: 600;
 		}
 		li.menu-item {
@@ -122,14 +123,18 @@ export default {
 			align-items: center;
 			height: 50px;
 			padding-left: 25px;
-			border-top: 1px solid #d4d4d4;
+			//border-top: 1px solid #d4d4d4;
 			transition: all 0.2s ease-in-out;
 			user-select: none;
+			color: rgb(119, 135, 135);
 			.blue {
-				color: #064db8;
+				color: rgb(185, 195, 184);
+				
+				//color: #064db8;
 			}
 			.red {
-				color: #e01f2ffa;
+				color: rgb(185, 195, 184);
+				//color: #e01f2ffa;
 			}
 			.text {
 				margin: 0;
@@ -137,11 +142,12 @@ export default {
 				padding-left: 15px;
 			}
 			&.selected {
-				border-left: 3px solid #064db8;
-				background: #eeeeee;
+				border-left: 4px solid rgb(135, 186, 81);
+				//background: rgb(51, 67, 73);
+				color: white;
 			}
 			&:hover {
-				background: #e4e4e4;
+				background: rgb(61, 56, 85)
 			}
 		}
 	}

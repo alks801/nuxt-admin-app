@@ -52,11 +52,11 @@ function PanelUser(id, login, fname, lname, apms, asc, aadmin, achn, aconfigs, r
   this.Login = login;;
   this.FirstName = fname;
   this.LastName = lname;
-  this.AccountPMS = apms;
-  this.AccountCS = asc;
-  this.AccountAdmin = aadmin;
-  this.AccountChn = achn;
-  this.AccountConfigs = aconfigs;
+  this.PMS = apms;
+  this.CS = asc;
+  this.Admin = aadmin;
+  this.Chn = achn;
+  this.Configs = aconfigs;
   this.Role = role;
   this.Pass = pass;
   return this;

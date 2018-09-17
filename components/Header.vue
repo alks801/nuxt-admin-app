@@ -32,24 +32,25 @@ export default {
 
 <style lang="less" scoped>
 .icon {
-  color: #757575;
+  color: white;
   cursor: pointer;
 }
 .header {
   height: 80px;
-  box-shadow: 0 1px 8px #bebebe;
+  //box-shadow: 0 1px 8px #bebebe;
   display: flex;
   align-items: center;
   z-index: 1;
   user-select: none;
   justify-content: space-between;
+  background: rgb(59, 141, 188);
   .text {
     font-size: 2.1em;
     padding-left: 30px;
     font-family: 'Open Sans', serif;
     background-color: #565656;
-    color: transparent;
-    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+    color: white;
+    //text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
